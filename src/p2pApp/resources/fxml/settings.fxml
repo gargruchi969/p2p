@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="578.0" prefWidth="300.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p2pApp.p2pUi.controller.PreferencesDialogController">
+  <children>
+      <HBox prefHeight="32.0" prefWidth="298.0" style="-fx-background-color: #9dd2d3;">
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="66.0" text="Share It">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="198.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="closeLabel" alignment="CENTER" onMouseClicked="#closeClicked" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" prefHeight="32.0" prefWidth="49.0" text="X">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" prefHeight="450.0" prefWidth="298.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TextField fx:id="ipAddress" layoutX="95.0" layoutY="57.0" onKeyPressed="#notifyChanges3" prefHeight="25.0" prefWidth="175.0" promptText="for eg 172" />
+            <TextArea fx:id="addedPaths" layoutX="26.0" layoutY="224.0" onKeyTyped="#notifyChanges3" prefHeight="116.0" prefWidth="247.0" />
+            <TextField fx:id="outputFolder" editable="false" layoutX="95.0" layoutY="108.0" onKeyPressed="#notifyChanges3" prefHeight="25.0" prefWidth="131.0" promptText="d:/p2p/downloads/" />
+            <Label layoutX="15.0" layoutY="57.0" prefHeight="27.0" prefWidth="78.0" text="Base IP:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="15.0" layoutY="108.0" prefHeight="25.0" prefWidth="78.0" text="Save in: ">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="inputPath" accessibleText="Hello" editable="false" layoutX="21.0" layoutY="424.0" prefHeight="25.0" prefWidth="191.0" promptText="Selected path will be shown here..." />
+            <Label layoutX="20.0" layoutY="199.0" prefHeight="25.0" prefWidth="96.0" text="Shared Paths:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="91.0" layoutY="4.0" prefHeight="35.0" prefWidth="104.0" text=" Preferences" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="inputDepth" layoutX="188.0" layoutY="383.0" prefHeight="25.0" prefWidth="90.0" />
+            <Label layoutX="13.0" layoutY="350.0" prefHeight="25.0" prefWidth="63.0" text="Add Path">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Button fx:id="addPathBtn" layoutX="224.0" layoutY="424.0" mnemonicParsing="false" onAction="#addNewPath" prefHeight="25.0" prefWidth="51.0" text="Add " />
+            <Button fx:id="saveBtn" defaultButton="true" layoutX="110.0" layoutY="495.0" mnemonicParsing="false" onAction="#saveChanges" prefHeight="35.0" prefWidth="78.0" text="Save">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="fileBtn" layoutX="68.0" layoutY="383.0" mnemonicParsing="false" onAction="#openFileList" prefHeight="25.0" prefWidth="51.0" text="File" />
+            <Button fx:id="folderBtn" layoutX="126.0" layoutY="383.0" mnemonicParsing="false" onAction="#openDirList" prefHeight="25.0" prefWidth="59.0" text="Folder" />
+            <Separator layoutX="84.0" layoutY="361.0" prefHeight="3.0" prefWidth="197.0" />
+            <Separator layoutX="27.0" layoutY="469.0" prefHeight="3.0" prefWidth="256.0" />
+            <Label fx:id="statusLabel" layoutX="27.0" layoutY="500.0" prefHeight="25.0" prefWidth="71.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="226.0" layoutY="108.0" mnemonicParsing="false" onAction="#outputDir" prefHeight="25.0" prefWidth="46.0" text="Browse">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="16.0" layoutY="383.0" prefHeight="25.0" prefWidth="46.0" text="Select:">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="playerLocation" editable="false" layoutX="95.0" layoutY="157.0" onKeyPressed="#notifyChanges3" prefHeight="25.0" prefWidth="131.0" promptText="d:/p2p/mpc/mpc.exe" />
+            <Button layoutX="226.0" layoutY="157.0" mnemonicParsing="false" onAction="#locatePlayer" prefHeight="25.0" prefWidth="46.0" text="Browse">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="15.0" layoutY="157.0" prefHeight="25.0" prefWidth="78.0" text="Media Player:" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vBox" prefHeight="44.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="553.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="info" fitHeight="24.0" fitWidth="24.0" layoutX="287.0" layoutY="11.0" opacity="0.89" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/info_r.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="filename" alignment="TOP_LEFT" layoutX="42.0" layoutY="7.0" prefHeight="35.0" prefWidth="268.0" text="Name of a file" wrapText="true" />
+            <ProgressIndicator fx:id="progress" layoutX="390.0" layoutY="2.0" prefHeight="40.0" prefWidth="43.0" progress="0.0" />
+            <Separator layoutX="313.0" layoutY="8.0" orientation="VERTICAL" prefHeight="28.0" prefWidth="3.0" />
+            <Label fx:id="filesize" alignment="CENTER" layoutX="326.0" layoutY="4.0" prefHeight="25.0" prefWidth="56.0" text="Filesize">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Separator layoutX="390.0" layoutY="9.0" orientation="VERTICAL" prefHeight="28.0" prefWidth="3.0" />
+            <Separator layoutX="433.0" layoutY="9.0" orientation="VERTICAL" prefHeight="28.0" prefWidth="3.0" />
+            <ImageView fx:id="image" fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/image_pl.png" />
+               </image></ImageView>
+            <ImageView fx:id="pauseImage" fitHeight="30.0" fitWidth="30.0" layoutX="484.0" layoutY="7.0" onMouseClicked="#pauseDownload" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/img_ps.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cancelImage" fitHeight="30.0" fitWidth="30.0" layoutX="520.0" layoutY="7.0" onMouseClicked="#cancelDownload" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/images_c.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="startImage" fitHeight="30.0" fitWidth="30.0" layoutX="446.0" layoutY="7.0" onMouseClicked="#playDownload" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/imag_p.png" />
+               </image>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
